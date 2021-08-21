@@ -1,0 +1,25 @@
+{
+  "name": "weekend-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "12.2.0",
+    "dotenv": "10.0.0",
+    "express": "4.17.1",
+    "lodash": "4.17.15",
+    "node-cache": "5.1.1",
+    "node-cron": "2.0.3",
+    "xmlhttprequest": "1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
