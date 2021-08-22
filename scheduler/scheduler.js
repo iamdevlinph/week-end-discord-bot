@@ -39,8 +39,8 @@ function reminder(client, sched) {
   });
 }
 
-function cronRunInfo(message) {
-  console.log(`[CRON]: ${message}`);
+function cronRunInfo(schedule, title) {
+  console.log(`[CRON]: ${schedule}, ${title}`);
 }
 
 module.exports = {
