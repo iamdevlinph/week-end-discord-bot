@@ -36,4 +36,4 @@ https://discordapp.com/api/oauth2/authorize?scope=bot&client_id=CLIENT_ID
 ```
 
 ## Where to host for free?
-I'm currently using https://replit.com/.
+I'm currently using https://replit.com/. And use https://uptimerobot.com/ to keep on pinging on the server to keep it active.
