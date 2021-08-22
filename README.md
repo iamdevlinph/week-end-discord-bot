@@ -22,8 +22,14 @@ The test channel ID where the scheduler will send messages.
 ### PROD_CHANNEL_ID
 The channel ID where the scheduler will send messages.
 
-### KEEP_ME_ALIVE_URL
-The url to always ping to keep the bot alive if you're using a free hosting service.
+<!-- ### KEEP_ME_ALIVE_URL
+The url to always ping to keep the bot alive if you're using a free hosting service. -->
+
+### TZ
+Timezone to base on. Default `Asia/Manila`
+
+### PORT
+Port for the app to run on. Default is `3000`
 
 ## How to add bot manually?
 Copy the `CLIENT_ID`

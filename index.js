@@ -8,7 +8,7 @@ const { runScheduler } = require("./scheduler/scheduler");
 // Server Stuff
 const express = require("express");
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   console.log(Date.now() + " Ping Received");

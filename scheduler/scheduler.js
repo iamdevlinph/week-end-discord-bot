@@ -22,7 +22,10 @@ const schedules = [
 
 const runScheduler = (client) => {
   schedules.map((sched) => {
-    cron.schedule(sched.schedule, () => reminder(client, sched));
+    cron.schedule(sched.schedule, () => reminder(client, sched), {
+      scheduled: true,
+      timezone: process.env.TZ || 'Asia/Manila',
+    });
     cronRunInfo({ schedule: sched.schedule, title: sched.title });
   });
 };
