@@ -3,6 +3,7 @@ const cron = require("node-cron");
 const TEST_CHANNEL_ID = process.env.TEST_CHANNEL_ID;
 const PROD_CHANNEL_ID = process.env.PROD_CHANNEL_ID;
 const CHANNEL_ID = PROD_CHANNEL_ID || TEST_CHANNEL_ID;
+console.log("CHANNEL_ID", CHANNEL_ID);
 
 const schedules = [
   // party party!! 🎉🎉
@@ -22,14 +23,11 @@ const schedules = [
 const runScheduler = (client) => {
   schedules.map((sched) => {
     cron.schedule(sched.schedule, () => reminder(client, sched));
-    cronRunInfo(sched.title);
+    cronRunInfo({ schedule: sched.schedule, title: sched.title });
   });
 };
 
 function reminder(client, sched) {
-  const currentDate = new Date();
-  const weekDay = currentDate.getDay();
-
   let description = sched.description;
 
   client.channels.cache.get(CHANNEL_ID).send({

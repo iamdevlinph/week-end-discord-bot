@@ -8,7 +8,7 @@ const { runScheduler } = require("./scheduler/scheduler");
 // Server Stuff
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.get("/", (req, res) => {
   console.log(Date.now() + " Ping Received");
@@ -20,11 +20,16 @@ app.listen(port, () =>
 );
 
 // to keep the bot alive 24/7
-if (process.env.KEEP_ME_ALIVE_URL) {
-  setInterval(() => {
-    https.get(process.env.KEEP_ME_ALIVE_URL);
-  }, 300000);
-}
+// if (process.env.KEEP_ME_ALIVE_URL) {
+//   console.log('process.env.KEEP_ME_ALIVE_URL', process.env.KEEP_ME_ALIVE_URL)
+//   try {
+//     setInterval(() => {
+//       https.get(process.env.KEEP_ME_ALIVE_URL);
+//     }, 5000);
+//   } catch (e) {
+//     console.log('keep me alive error', e)
+//   }
+// }
 
 // Actual BOT Code
 const client = new Discord.Client();
