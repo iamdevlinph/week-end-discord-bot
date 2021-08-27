@@ -1,6 +1,5 @@
 require("dotenv").config();
 const Discord = require("discord.js");
-const https = require("https");
 const prefix = process.env.BOT_PREFIX || "!wknd";
 
 const { runScheduler } = require("./scheduler/scheduler");
@@ -18,18 +17,6 @@ app.get("/", (req, res) => {
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
-
-// to keep the bot alive 24/7
-// if (process.env.KEEP_ME_ALIVE_URL) {
-//   console.log('process.env.KEEP_ME_ALIVE_URL', process.env.KEEP_ME_ALIVE_URL)
-//   try {
-//     setInterval(() => {
-//       https.get(process.env.KEEP_ME_ALIVE_URL);
-//     }, 5000);
-//   } catch (e) {
-//     console.log('keep me alive error', e)
-//   }
-// }
 
 // Actual BOT Code
 const client = new Discord.Client();
