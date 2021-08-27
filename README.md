@@ -1,13 +1,22 @@
-# getting started
+# Getting Started
 ```
 yarn install
 yarn start
 ```
+## Getting `CHANNEL_ID`
+Enable developer mode on Discord. So you can retrieve `CHANNEL_ID` values.
+
+![discord developer mode](/docs/discord-developer-mode.jpg)
+
+Right click a channel you want to use as your `TEST_CHANNEL_ID`.
+
+![copy channel id](/docs/copy-channel-id.jpg)
+
 
 ## ENV Variables
 ### DISCORD_TOKEN
 
-Go to the developer portal > applications and navigate to the bot. You can get the `DISCORD_TOKEN` by clicking on reveal token.
+Go to the [developer portal > applications](https://discord.com/developers/applications) and navigate to the bot. You can get the `DISCORD_TOKEN` by clicking on reveal token or just click on Copy.
 
 ![DISCORD_TOKEN](/docs/discord_token.jpg)
 
@@ -21,9 +30,6 @@ The test channel ID where the scheduler will send messages.
 
 ### PROD_CHANNEL_ID
 The channel ID where the scheduler will send messages.
-
-<!-- ### KEEP_ME_ALIVE_URL
-The url to always ping to keep the bot alive if you're using a free hosting service. -->
 
 ### TZ
 Timezone to base on. Default `Asia/Manila`
